@@ -1,0 +1,2738 @@
+{
+	"info": {
+		"_postman_id": "44a70014-72fb-488b-8323-b10c3c53d4f9",
+		"name": "Test - Govtech Singapore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15607869"
+	},
+	"item": [
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "Get All Teacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/teachers",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"teachers"
+							],
+							"query": [
+								{
+									"key": "include_students",
+									"value": "true",
+									"description": "(Optional) - (Boolean)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "841"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"349-vQiui8lVDgFc7uo92/dx7xXlo/4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:37:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"email\": \"teacher1@example.com\",\n            \"createdAt\": \"2026-02-28T06:58:24.070Z\",\n            \"updatedAt\": \"2026-02-28T06:58:24.070Z\"\n        },\n        {\n            \"id\": 2,\n            \"email\": \"teacher2@example.com\",\n            \"createdAt\": \"2026-02-28T06:58:24.070Z\",\n            \"updatedAt\": \"2026-02-28T06:58:24.070Z\"\n        },\n        {\n            \"id\": 3,\n            \"email\": \"teacher3@example.com\",\n            \"createdAt\": \"2026-02-28T06:58:24.070Z\",\n            \"updatedAt\": \"2026-02-28T06:58:24.070Z\"\n        },\n        {\n            \"id\": 10,\n            \"email\": \"teacher1@example.com\",\n            \"createdAt\": \"2026-02-28T15:43:27.369Z\",\n            \"updatedAt\": \"2026-02-28T15:43:27.369Z\"\n        },\n        {\n            \"id\": 11,\n            \"email\": \"teacher2@example.com\",\n            \"createdAt\": \"2026-02-28T15:43:27.369Z\",\n            \"updatedAt\": \"2026-02-28T15:43:27.369Z\"\n        },\n        {\n            \"id\": 12,\n            \"email\": \"teacher3@example.com\",\n            \"createdAt\": \"2026-02-28T15:43:27.369Z\",\n            \"updatedAt\": \"2026-02-28T15:43:27.369Z\"\n        },\n        {\n            \"id\": 13,\n            \"email\": \"zuran290701@gmail.com\",\n            \"createdAt\": \"2026-02-28T16:35:31.085Z\",\n            \"updatedAt\": \"2026-02-28T16:37:31.909Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Success - With Students",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers?include_students=true",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "587"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24b-hIJKh5HjWaIGpIpDaT9THwToPfg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:46:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"email\": \"teacher1@example.com\",\n            \"createdAt\": \"2026-02-28T18:39:42.368Z\",\n            \"updatedAt\": \"2026-02-28T18:39:42.368Z\",\n            \"students\": [\n                {\n                    \"id\": 1,\n                    \"email\": \"student1@example.com\",\n                    \"is_suspended\": false\n                },\n                {\n                    \"id\": 2,\n                    \"email\": \"student2@example.com\",\n                    \"is_suspended\": false\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"email\": \"teacher2@example.com\",\n            \"createdAt\": \"2026-02-28T18:39:42.368Z\",\n            \"updatedAt\": \"2026-02-28T18:39:42.368Z\",\n            \"students\": [\n                {\n                    \"id\": 1,\n                    \"email\": \"student1@example.com\",\n                    \"is_suspended\": false\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"email\": \"teacher3@example.com\",\n            \"createdAt\": \"2026-02-28T18:39:42.368Z\",\n            \"updatedAt\": \"2026-02-28T18:39:42.368Z\",\n            \"students\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Teacher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/teachers/1",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"teachers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "include_students",
+									"value": "true",
+									"description": "(Optional) - (Boolean)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers/1",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"1"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7e-OIaMXvHDVJiBG61nzuk+PIGbIco\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:39:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"teacher1@example.com\",\n        \"createdAt\": \"2026-02-28T06:58:24.070Z\",\n        \"updatedAt\": \"2026-02-28T06:58:24.070Z\"\n    }\n}"
+						},
+						{
+							"name": "Success - With Students",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers/1?include_students=true",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"1"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "261"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"105-s78cvx9GyPDOITOe967FE/BP/KI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:47:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"teacher1@example.com\",\n        \"createdAt\": \"2026-02-28T18:39:42.368Z\",\n        \"updatedAt\": \"2026-02-28T18:39:42.368Z\",\n        \"students\": [\n            {\n                \"id\": 1,\n                \"email\": \"student1@example.com\",\n                \"is_suspended\": false\n            },\n            {\n                \"id\": 2,\n                \"email\": \"student2@example.com\",\n                \"is_suspended\": false\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers/5",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"5"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-MeDn3DRHO2ZXPx39DFedOj9IKTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:12:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Teacher not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Teacher By Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"teacher1@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/teachers/email",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"teachers",
+								"email"
+							],
+							"query": [
+								{
+									"key": "include_students",
+									"value": "true",
+									"description": "(Optional) - (Boolean)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran2907@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers/email",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"email"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7e-EFMF/+ZnPKjD75mTcxw8Eq5jPIA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:54:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 17,\n        \"email\": \"zuran2907@gmail.com\",\n        \"createdAt\": \"2026-02-28T16:48:20.677Z\",\n        \"updatedAt\": \"2026-02-28T16:48:20.677Z\"\n    }\n}"
+						},
+						{
+							"name": "Success - With Students",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"teacher1@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers/email?include_students=true",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"email"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "261"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"105-s78cvx9GyPDOITOe967FE/BP/KI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:08:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"teacher1@example.com\",\n        \"createdAt\": \"2026-02-28T18:39:42.368Z\",\n        \"updatedAt\": \"2026-02-28T18:39:42.368Z\",\n        \"students\": [\n            {\n                \"id\": 1,\n                \"email\": \"student1@example.com\",\n                \"is_suspended\": false\n            },\n            {\n                \"id\": 2,\n                \"email\": \"student2@example.com\",\n                \"is_suspended\": false\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran290701@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers/email",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"email"
+									],
+									"query": [
+										{
+											"key": "include_students",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-MeDn3DRHO2ZXPx39DFedOj9IKTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:53:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Teacher not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zuran2907@gmail.com\" // (Required) - (Email)\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/teachers",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"teachers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran2907@gmail.com\" // (Required) - (Email)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7e-UYc4qYQh4+ZcFe5Dr/n2TNZmL2s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:35:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 13,\n        \"email\": \"zuran2907@gmail.com\",\n        \"createdAt\": \"2026-02-28T16:35:31.085Z\",\n        \"updatedAt\": \"2026-02-28T16:35:31.085Z\"\n    }\n}"
+						},
+						{
+							"name": "Failed - Validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran2907@\" // (Required) - (Email)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-T1BEx6o+C70z84KaRAtv0D0RLig\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:35:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation error\",\n    \"errors\": {\n        \"email\": [\n            \"Invalid email format\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zuran290701@gmail.com\" // (Required) - (Email)\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/teachers/13",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"teachers",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran290701@gmail.com\" // (Required) - (Email)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers/13",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"13"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"80-fInOBX5XxRAMGuPn4rqrr/Kf7j4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:37:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 13,\n        \"email\": \"zuran290701@gmail.com\",\n        \"createdAt\": \"2026-02-28T16:35:31.085Z\",\n        \"updatedAt\": \"2026-02-28T16:37:31.909Z\"\n    }\n}"
+						},
+						{
+							"name": "Failed - Validation",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran290701\" // (Required) - (Email)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/teachers/13",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"13"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-T1BEx6o+C70z84KaRAtv0D0RLig\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:37:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation error\",\n    \"errors\": {\n        \"email\": [\n            \"Invalid email format\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Teacher",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/teachers/16",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"teachers",
+								"16"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers/16",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-hC4t+kJS9jbMdEzc98RsWUIXaXI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:41:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Teacher deleted successfully\"\n}"
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/teachers/13",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"teachers",
+										"13"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-MeDn3DRHO2ZXPx39DFedOj9IKTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:40:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Teacher not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get All Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/students",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"students"
+							],
+							"query": [
+								{
+									"key": "include_teachers",
+									"value": "true",
+									"description": "(Optional) - (Boolean)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/students",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students"
+									],
+									"query": [
+										{
+											"key": "include_teachers",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "842"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34a-HSO23JygtNtgB8dXi9kqB6Zahxs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 18:30:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"email\": \"student1@example.com\",\n            \"is_suspended\": false,\n            \"createdAt\": \"2026-02-28T07:19:56.445Z\",\n            \"updatedAt\": \"2026-02-28T07:19:56.445Z\"\n        },\n        {\n            \"id\": 2,\n            \"email\": \"student2@example.com\",\n            \"is_suspended\": false,\n            \"createdAt\": \"2026-02-28T07:19:56.445Z\",\n            \"updatedAt\": \"2026-02-28T07:19:56.445Z\"\n        },\n        {\n            \"id\": 3,\n            \"email\": \"student3@example.com\",\n            \"is_suspended\": true,\n            \"createdAt\": \"2026-02-28T07:19:56.445Z\",\n            \"updatedAt\": \"2026-02-28T07:19:56.445Z\"\n        },\n        {\n            \"id\": 4,\n            \"email\": \"student1@example.com\",\n            \"is_suspended\": false,\n            \"createdAt\": \"2026-02-28T15:43:27.388Z\",\n            \"updatedAt\": \"2026-02-28T15:43:27.388Z\"\n        },\n        {\n            \"id\": 5,\n            \"email\": \"student2@example.com\",\n            \"is_suspended\": false,\n            \"createdAt\": \"2026-02-28T15:43:27.388Z\",\n            \"updatedAt\": \"2026-02-28T15:43:27.388Z\"\n        },\n        {\n            \"id\": 6,\n            \"email\": \"student3@example.com\",\n            \"is_suspended\": true,\n            \"createdAt\": \"2026-02-28T15:43:27.388Z\",\n            \"updatedAt\": \"2026-02-28T15:43:27.388Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Success - With Teachers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/students?include_teachers=true",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students"
+									],
+									"query": [
+										{
+											"key": "include_teachers",
+											"value": "true",
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "586"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24a-59gS+L/mGrpWkeepNTSK2LXwReY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:56:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"email\": \"student1@example.com\",\n            \"is_suspended\": false,\n            \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n            \"updatedAt\": \"2026-02-28T18:39:42.402Z\",\n            \"teachers\": [\n                {\n                    \"id\": 1,\n                    \"email\": \"teacher1@example.com\"\n                },\n                {\n                    \"id\": 2,\n                    \"email\": \"teacher2@example.com\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"email\": \"student2@example.com\",\n            \"is_suspended\": false,\n            \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n            \"updatedAt\": \"2026-02-28T18:39:42.402Z\",\n            \"teachers\": [\n                {\n                    \"id\": 1,\n                    \"email\": \"teacher1@example.com\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"email\": \"student3@example.com\",\n            \"is_suspended\": true,\n            \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n            \"updatedAt\": \"2026-03-01T09:23:45.743Z\",\n            \"teachers\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/students/1",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"1"
+							],
+							"query": [
+								{
+									"key": "include_teachers",
+									"value": "true",
+									"description": "(Optional) - (Boolean)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/students",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students"
+									],
+									"query": [
+										{
+											"key": "include_teachers",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "842"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34a-HSO23JygtNtgB8dXi9kqB6Zahxs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 18:30:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"student1@example.com\",\n        \"is_suspended\": false,\n        \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n        \"updatedAt\": \"2026-02-28T18:39:42.402Z\"\n    }\n}"
+						},
+						{
+							"name": "Success - With Teachers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/students?include_teachers=true",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students"
+									],
+									"query": [
+										{
+											"key": "include_teachers",
+											"value": "true",
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "586"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24a-59gS+L/mGrpWkeepNTSK2LXwReY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:56:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"student1@example.com\",\n        \"is_suspended\": false,\n        \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n        \"updatedAt\": \"2026-02-28T18:39:42.402Z\",\n        \"teachers\": [\n            {\n                \"id\": 1,\n                \"email\": \"teacher1@example.com\"\n            },\n            {\n                \"id\": 2,\n                \"email\": \"teacher2@example.com\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Student By Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"student1@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/students/email",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"email"
+							],
+							"query": [
+								{
+									"key": "include_teachers",
+									"value": "true",
+									"description": "(Optional) - (Boolean)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran2907@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students/email",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"email"
+									],
+									"query": [
+										{
+											"key": "include_teachers",
+											"value": "true",
+											"description": "(Optional) - (Boolean)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7e-EFMF/+ZnPKjD75mTcxw8Eq5jPIA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:54:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"student1@example.com\",\n        \"is_suspended\": false,\n        \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n        \"updatedAt\": \"2026-02-28T18:39:42.402Z\"\n    }\n}"
+						},
+						{
+							"name": "Success - With Teachers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"student1@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students/email?include_teachers=true",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"email"
+									],
+									"query": [
+										{
+											"key": "include_teachers",
+											"value": "true",
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f0-JkgPHNI2Jpuv2/5bTXLYjClAHU8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:06:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"student1@example.com\",\n        \"is_suspended\": false,\n        \"createdAt\": \"2026-02-28T18:39:42.402Z\",\n        \"updatedAt\": \"2026-02-28T18:39:42.402Z\",\n        \"teachers\": [\n            {\n                \"id\": 1,\n                \"email\": \"teacher1@example.com\"\n            },\n            {\n                \"id\": 2,\n                \"email\": \"teacher2@example.com\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"zuran290701@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students/email?",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"email"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": null,
+											"description": "(Optional) - (Boolean)"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-MeDn3DRHO2ZXPx39DFedOj9IKTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Feb 2026 16:53:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"student4@example.com\" // (Required) - (Email)\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/students",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"student4@example.com\" // (Required) - (Email)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-81h1H9gPlHal1hZEN73GItd06PU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:09:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"email\": \"student4@example.com\",\n        \"is_suspended\": false,\n        \"createdAt\": \"2026-03-01T10:09:44.672Z\",\n        \"updatedAt\": \"2026-03-01T10:09:44.672Z\"\n    }\n}"
+						},
+						{
+							"name": "Failed - Validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"student4\" // (Required) - (Email)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-YA4eD/IUibRf5v2CqvJut5mOZSs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:09:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid email format\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"student4@example.com\", // (Optional) - (Email)\n    \"is_suspended\": \"fa\" // (Optional) - (Boolean)\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/students/4",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"email\": \"student4@example.com\", // (Optional) - (Email)\n    \"is_suspended\": true // (Optional) - (Boolean)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students/4",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-COjSlR8AJvLg8txrmUEG0m0CeLg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:15:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"email\": \"student4@example.com\",\n        \"is_suspended\": true,\n        \"createdAt\": \"2026-03-01T10:09:44.672Z\",\n        \"updatedAt\": \"2026-03-01T10:15:51.048Z\"\n    }\n}"
+						},
+						{
+							"name": "Failed - Validation",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"email\": \"student4@example.com\", // (Optional) - (Email)\n    \"is_suspended\": \"fa\" // (Optional) - (Boolean)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students/4",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"4"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-IQmolWO2icHKZPg08Cb6QGh2hQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:15:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid input: expected boolean, received string\"\n}"
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"email\": \"student4@example.com\", // (Optional) - (Email)\n    \"is_suspended\": true // (Optional) - (Boolean)\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/students/8",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"8"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-LU9H1tMP71GW4rOZhbj+Fk6EQVY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:16:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/students/4",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"students",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/students/4",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-AtjnaCnIxuYLqXagnN4yLTQXC/M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:17:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/students/9",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"students",
+										"9"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-LU9H1tMP71GW4rOZhbj+Fk6EQVY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 10:17:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Teacher Student",
+			"item": [
+				{
+					"name": "Case 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"teacher\": \"teacher1@example.com\",\n    \"students\": [\n        \"student1@example.com\",\n        \"student2@example.com\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/register",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"teacher\": \"teacher1@example.com\",\n    \"students\": [\n        \"student1@example.com\",\n        \"student2@example.com\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/register",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:23:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Failed Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"teacher\": \"teacher1@example.com\",\n    \"students\": [\n        \"student1@example.com\",\n        \"student9@example.com\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/register",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-kGRFW+6IJxsRinsycmwqBYy/TbY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:24:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Students not found: student9@example.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Case 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/api/commonstudents?teacher=teacher1@example.com&teacher=teacher2@example.com",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"commonstudents"
+							],
+							"query": [
+								{
+									"key": "teacher",
+									"value": "teacher1@example.com"
+								},
+								{
+									"key": "teacher",
+									"value": "teacher2@example.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/commonstudents?teacher=teacher1@example.com&teacher=teacher2@example.com",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"commonstudents"
+									],
+									"query": [
+										{
+											"key": "teacher",
+											"value": "teacher1@example.com"
+										},
+										{
+											"key": "teacher",
+											"value": "teacher2@example.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-RtJ1eZTJ0WZjmAEGV4aFlKwMu/Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:09:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"students\": [\n        \"student1@example.com\"\n    ]\n}"
+						},
+						{
+							"name": "Failed - Validation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/commonstudents",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"commonstudents"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-lLm16Gv5u5DtS8NHCrsiTpXLkVk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 08:15:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Query parameter \\\"teacher\\\" is required\"\n}"
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{app_url}}/api/commonstudents?teacher=teacher9@example.com&teacher=teacher2@example.com",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"commonstudents"
+									],
+									"query": [
+										{
+											"key": "teacher",
+											"value": "teacher9@example.com"
+										},
+										{
+											"key": "teacher",
+											"value": "teacher2@example.com"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-hQ0xfZ4+bG0Mu580K8b9eg8pnAw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:28:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Teachers not found: teacher9@example.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Case 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student\": \"student3@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/suspend",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"suspend"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"student\": \"student3@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/suspend",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"suspend"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:23:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Failed - Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"student\": \"student8@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/suspend",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"suspend"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-qPWYiN1+0QbW8VqZnArcxlSJSAQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:23:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student student8@example.com not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Case 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"teacher\": \"teacher1@example.com\",\n    \"notification\": \"Hello @student3@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/api/retrievefornotifications",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"api",
+								"retrievefornotifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success - Student 3 Not Suspend",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"teacher\": \"teacher1@example.com\",\n    \"notification\": \"Hello @student3@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/retrievefornotifications",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"retrievefornotifications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-Ge7+ioeK4GU9oHT829lHCSE3Qtc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:34:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"recipients\": [\n        \"student1@example.com\",\n        \"student2@example.com\",\n        \"student3@example.com\"\n    ]\n}"
+						},
+						{
+							"name": "Success - Student 3 Suspend",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"teacher\": \"teacher1@example.com\",\n    \"notification\": \"Hello @student3@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{app_url}}/api/retrievefornotifications",
+									"host": [
+										"{{app_url}}"
+									],
+									"path": [
+										"api",
+										"retrievefornotifications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-NkOAlC15naULaS4Y122ANpBzZXs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 01 Mar 2026 09:35:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"recipients\": [\n        \"student1@example.com\",\n        \"student2@example.com\"\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "app_url",
+			"value": ""
+		}
+	]
+}

@@ -1,0 +1,145 @@
+-- MySQL dump 10.13  Distrib 5.7.23, for macos10.13 (x86_64)
+--
+-- Host: 127.0.0.1    Database: test_govtechsg
+-- ------------------------------------------------------
+-- Server version	9.4.0
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `_prisma_migrations`
+--
+
+DROP TABLE IF EXISTS `_prisma_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `_prisma_migrations` (
+  `id` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `checksum` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `finished_at` datetime(3) DEFAULT NULL,
+  `migration_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `logs` text COLLATE utf8mb4_unicode_ci,
+  `rolled_back_at` datetime(3) DEFAULT NULL,
+  `started_at` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `applied_steps_count` int unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `_prisma_migrations`
+--
+
+LOCK TABLES `_prisma_migrations` WRITE;
+/*!40000 ALTER TABLE `_prisma_migrations` DISABLE KEYS */;
+INSERT INTO `_prisma_migrations` VALUES ('4fd0a0a6-722e-4bf6-b095-0235185e346d','4733dadbfb2c74fa6b40a41878806863d432c168375096bd5e7165ece48829ff','2026-02-28 18:39:30.666','20260228065358_create_teachers_table',NULL,NULL,'2026-02-28 18:39:30.657',1),('586aad11-f7ca-40ec-98bb-17d0dca17fb8','2819e19086ad87408750cc1ad395f09d40adfff20a7f0fabb5a0611308b00bd4','2026-02-28 18:39:30.672','20260228071903_create_students_table',NULL,NULL,'2026-02-28 18:39:30.667',1),('c90a357a-4a75-49cf-ad7c-25c9ef7e5e43','2452e49dc65a6292980f15197ead2dd36db1fe4445303d44afdadde30d8176e9','2026-02-28 18:39:30.735','20260228154302_add_relations_teacher_student',NULL,NULL,'2026-02-28 18:39:30.673',1);
+/*!40000 ALTER TABLE `_prisma_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `students`
+--
+
+DROP TABLE IF EXISTS `students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `students` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_suspended` tinyint(1) NOT NULL DEFAULT '0',
+  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `updatedAt` datetime(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `students`
+--
+
+LOCK TABLES `students` WRITE;
+/*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` VALUES (1,'student1@example.com',0,'2026-02-28 18:39:42.402','2026-02-28 18:39:42.402'),(2,'student2@example.com',0,'2026-02-28 18:39:42.402','2026-02-28 18:39:42.402'),(3,'student3@example.com',1,'2026-02-28 18:39:42.402','2026-03-01 09:23:45.743');
+/*!40000 ALTER TABLE `students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `teacher_student`
+--
+
+DROP TABLE IF EXISTS `teacher_student`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `teacher_student` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `teacher_id` int NOT NULL,
+  `student_id` int NOT NULL,
+  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `updatedAt` datetime(3) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `teacher_student_teacher_id_fkey` (`teacher_id`),
+  KEY `teacher_student_student_id_fkey` (`student_id`),
+  CONSTRAINT `teacher_student_student_id_fkey` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `teacher_student_teacher_id_fkey` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teacher_student`
+--
+
+LOCK TABLES `teacher_student` WRITE;
+/*!40000 ALTER TABLE `teacher_student` DISABLE KEYS */;
+INSERT INTO `teacher_student` VALUES (1,1,1,'2026-03-01 07:01:11.313','2026-03-01 07:01:11.313'),(2,1,2,'2026-03-01 07:01:11.313','2026-03-01 07:01:11.313'),(3,2,1,'2026-03-01 16:09:35.000','2026-03-01 16:09:35.000');
+/*!40000 ALTER TABLE `teacher_student` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `teachers`
+--
+
+DROP TABLE IF EXISTS `teachers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `teachers` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `updatedAt` datetime(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `teachers`
+--
+
+LOCK TABLES `teachers` WRITE;
+/*!40000 ALTER TABLE `teachers` DISABLE KEYS */;
+INSERT INTO `teachers` VALUES (1,'teacher1@example.com','2026-02-28 18:39:42.368','2026-02-28 18:39:42.368'),(2,'teacher2@example.com','2026-02-28 18:39:42.368','2026-02-28 18:39:42.368'),(3,'teacher3@example.com','2026-02-28 18:39:42.368','2026-02-28 18:39:42.368');
+/*!40000 ALTER TABLE `teachers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'test_govtechsg'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-03-01 17:34:45
